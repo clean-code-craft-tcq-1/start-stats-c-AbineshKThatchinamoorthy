@@ -5,7 +5,7 @@
 ***     \file        alerts.c                                                              
 ***     \author                                                                
 \nt                  ABINESH KANJI KOVIL THATCHINAMOORTHY (RBEI/ECK1)                                                  
-***                  Created on 1/29/2021                                                                                    
+***                  Created on 1/28/2021                                                                                    
 ***                                                                            
 \par    File_description                                                       
 ***                  To handle the alerts during unexpected situations  
@@ -69,3 +69,5 @@ void ledAlerter_v() {
     /* LED trigger has to be done */
     ++ledAlertCallCount_i;
 }
+
+/* EOF */
