@@ -5,7 +5,7 @@
 ***     \file        alerts.h                                                              
 ***     \author                                                                
 \nt                  ABINESH KANJI KOVIL THATCHINAMOORTHY (RBEI/ECK1)                                                  
-***                  Created on 1/29/2021                                                                                    
+***                  Created on 1/28/2021                                                                                    
 ***                                                                            
 \par    File_description                                                       
 ***                  Header file to handle the alerts during unexpected situations  
@@ -28,3 +28,5 @@ void ledAlerter_v();
 /* EXTERN VARIABLES */
 extern int emailAlertCallCount_i;
 extern int ledAlertCallCount_i;
+
+/* EOF */
