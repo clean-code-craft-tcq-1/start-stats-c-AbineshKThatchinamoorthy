@@ -24,7 +24,7 @@ struct Stats compute_statistics_s(const float* numberset_a, int setlength_i) {
   for (count_i=0 ;count_i<setlength_i;count_i++)  
   {
       /* calculating sum */
-      sum_f +=numberset[count_i];
+      sum_f +=numberset_a[count_i];
       /*Identify Minimum Number in the array */
       if (statistics_s.min > numberset_a[count_i])
       {
@@ -38,7 +38,7 @@ struct Stats compute_statistics_s(const float* numberset_a, int setlength_i) {
   }
     
   /*calculating average*/  
-  statistics_s.average = (sum_f/setlength);
+  statistics_s.average = (sum_f/setlength_i);
     
   return statistics_s;
 }
@@ -54,8 +54,7 @@ struct Stats compute_statistics_s(const float* numberset_a, int setlength_i) {
  *     \param       Stats[IN]           - Statistic result values
  *     \returns     void
 *//*------------------------------------------------------------------------*/
-void check_and_alert_v(float maxThreshold_f, alerter_funcptr alerters[], struct Stats computedStats_s);
-{
+void check_and_alert_v(float maxThreshold_f, alerter_funcptr alerters[], struct Stats computedStats_s) {
     int count_i;
     
     if(computedStats_s.max > maxThreshold_f)
@@ -74,8 +73,7 @@ void check_and_alert_v(float maxThreshold_f, alerter_funcptr alerters[], struct 
  *     \param       void
  *     \returns     void
 *//*------------------------------------------------------------------------*/
-void emailAlerter_v()
-{
+void emailAlerter_v() {
     /* Email trigger has to be done */
     ++emailAlertCallCount_i;
 }
@@ -89,8 +87,7 @@ void emailAlerter_v()
  *     \param       void
  *     \returns     void
 *//*------------------------------------------------------------------------*/
-void ledAlerter_v()
-{
+void ledAlerter_v() {
     /* LED trigger has to be done */
     ++ledAlertCallCount_i;
 }
