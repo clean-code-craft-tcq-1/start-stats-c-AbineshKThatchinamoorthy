@@ -1,5 +1,23 @@
+  
+/******************************************************************************
+*****     (C) COPYRIGHT Robert Bosch GmbH CM-CI2 - All Rights Reserved    *****
+******************************************************************************/
+/*!                                                                            
+***     \file        stats-test.cpp                                                            
+***     \author                                                                
+\nt                  ABINESH KANJI KOVIL THATCHINAMOORTHY (RBEI/ECK1)                                                  
+***                  Created on 1/29/2021                                                                                    
+***                                                                            
+\par    File_description                                                       
+***                  CPP file consisting of Unit Test cases for the Statistics
+***                  and alert functionalities
+***                                                                                                                                                                     
+*\n*/                                                                          
+/*****************************************************************************/
+
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 
+/* INCLUSIONS */
 #include "catch.hpp"
 #include "alerts.h"
 
