@@ -55,3 +55,5 @@ struct Stats compute_statistics_s(const float* numberset_a, int setlength_i) {
     
   return statistics_s;
 }
+
+/* EOF */
