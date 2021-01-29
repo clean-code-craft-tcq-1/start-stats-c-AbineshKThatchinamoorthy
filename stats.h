@@ -1,5 +1,6 @@
 #include <stdlib.h>
 
+/* TYPE DEFINITIONS */
 /*structure for stats*/
 struct Stats 
 {
@@ -8,11 +9,14 @@ struct Stats
  float max;
 };
 
-struct Stats compute_statistics_s(const float* numberset, int setlength);
 typedef void (*alerter_funcptr)();
-void check_and_alert_v(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats);
+
+/* FUNCTION DECLARATION */
+struct Stats compute_statistics_s(const float* numberset, int setlength);
+void check_and_alert_v(float maxThreshold_f, alerter_funcptr alerters[], struct Stats computedStats_s);
 void emailAlerter_v();
 void ledAlerter_v();
 
-extern int emailAlertCallCount;
-extern int ledAlertCallCount;
+/* EXTERN VARIABLES */
+extern int emailAlertCallCount_I;
+extern int ledAlertCallCount_i;
