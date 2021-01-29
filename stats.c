@@ -1,7 +1,7 @@
 #include "stats.h"
 
-int emailAlertCallCount = 0;
-int ledAlertCallCount = 0;
+int emailAlertCallCount_i = 0;
+int ledAlertCallCount_i = 0;
 
 /*---------------------------------------------------------------------------*/
 /*     FUNCTION:    compute_statistics_s
@@ -13,27 +13,27 @@ int ledAlertCallCount = 0;
  *     \param       int [IN]          - length of the array
  *     \returns     struct Stats      - Statistics result values
 *//*------------------------------------------------------------------------*/
-struct Stats compute_statistics_s(const float* numberset, int setlength) {
+struct Stats compute_statistics_s(const float* numberset_a, int setlength_i) {
     
   float sum_f = 0.0; 
   int count_i;
   struct Stats statistics_s;
-  statistics_s.min = numberset[0];
-  statistics_s.max = numberset[0];
+  statistics_s.min = numberset_a[0];
+  statistics_s.max = numberset_a[0];
     
-  for (count_i=0 ;count_i<setlength;count_i++)  
+  for (count_i=0 ;count_i<setlength_i;count_i++)  
   {
       /* calculating sum */
       sum_f +=numberset[count_i];
       /*Identify Minimum Number in the array */
-      if (statistics_s.min > numberset[count_i])
+      if (statistics_s.min > numberset_a[count_i])
       {
-         statistics_s.min = numberset[count_i];
+         statistics_s.min = numberset_a[count_i];
       }
       /*Identify Maximum Number in the array */
-      if (statistics_s.max < numberset[count_i])
+      if (statistics_s.max < numberset_a[count_i])
       {
-          statistics_s.max = numberset[count_i];
+          statistics_s.max = numberset_a[count_i];
       }
   }
     
@@ -54,11 +54,11 @@ struct Stats compute_statistics_s(const float* numberset, int setlength) {
  *     \param       Stats[IN]           - Statistic result values
  *     \returns     void
 *//*------------------------------------------------------------------------*/
-void check_and_alert_v(float maxThreshold, alerter_funcptr alerters[], Stats computedStats)
+void check_and_alert_v(float maxThreshold_f, alerter_funcptr alerters[], struct Stats computedStats_s);
 {
     int count_i;
     
-    if(computedStats.max > maxThreshold)
+    if(computedStats_s.max > maxThreshold_f)
     {
         for (count_i=0 ;count_i<2;count_i++)  
             alerters[count_i]();
@@ -77,7 +77,7 @@ void check_and_alert_v(float maxThreshold, alerter_funcptr alerters[], Stats com
 void emailAlerter_v()
 {
     /* Email trigger has to be done */
-    ++emailAlertCallCount;
+    ++emailAlertCallCount_i;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -92,5 +92,5 @@ void emailAlerter_v()
 void ledAlerter_v()
 {
     /* LED trigger has to be done */
-    ++ledAlertCallCount;
+    ++ledAlertCallCount_i;
 }
