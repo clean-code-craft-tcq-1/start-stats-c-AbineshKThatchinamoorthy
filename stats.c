@@ -1,7 +1,20 @@
-#include "stats.h"
+/******************************************************************************
+*****     (C) COPYRIGHT Robert Bosch GmbH CM-CI2 - All Rights Reserved    *****
+******************************************************************************/
+/*!                                                                            
+***     \file        stats.c                                                           
+***     \author                                                                
+\nt                  ABINESH KANJI KOVIL THATCHINAMOORTHY (RBEI/ECK1)                                                  
+***                  Created on 1/28/2021                                                                                    
+***                                                                            
+\par    File_description                                                       
+***                  Implementation for computation of Statistics data
+***                                                                                                                                                                     
+*\n*/                                                                          
+/*****************************************************************************/
 
-int emailAlertCallCount_i = 0;
-int ledAlertCallCount_i = 0;
+/* INCLUSIONS */
+#include "stats.h"
 
 /*---------------------------------------------------------------------------*/
 /*     FUNCTION:    compute_statistics_s
