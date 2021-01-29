@@ -17,6 +17,10 @@
 /* INCLUSIONS */
 #include "alerts.h"
 
+/* Declaration of Global variables */
+int emailAlertCallCount_i = 0;
+int ledAlertCallCount_i = 0;
+
 /*---------------------------------------------------------------------------*/
 /*     FUNCTION:    check_and_alert_v
  */
