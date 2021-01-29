@@ -18,5 +18,5 @@ void emailAlerter_v();
 void ledAlerter_v();
 
 /* EXTERN VARIABLES */
-extern int emailAlertCallCount_I;
+extern int emailAlertCallCount_i;
 extern int ledAlertCallCount_i;
