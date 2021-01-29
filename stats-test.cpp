@@ -32,7 +32,7 @@ TEST_CASE("raises alerts when max is greater than threshold") {
 
     float numberset_a[] = {99.8, 34.2, 4.5};
     int setlength_i = sizeof(numberset_a) / sizeof(numberset_a[0]);
-    Stats computedStats = compute_statistics_s(numberset_a, setlength);
+    Stats computedStats_s = compute_statistics_s(numberset_a, setlength_i );
 
     const float maxThreshold_f = 10.2;
     check_and_alert_v(maxThreshold_f, alerters, computedStats_s);
