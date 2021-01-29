@@ -12,7 +12,7 @@ struct Stats
 typedef void (*alerter_funcptr)();
 
 /* FUNCTION DECLARATION */
-struct Stats compute_statistics_s(const float* numberset, int setlength);
+struct Stats compute_statistics_s(const float* numberset_a, int setlength_i);
 void check_and_alert_v(float maxThreshold_f, alerter_funcptr alerters[], struct Stats computedStats_s);
 void emailAlerter_v();
 void ledAlerter_v();
