@@ -20,6 +20,8 @@ TEST_CASE("average is NaN for empty array") {
     Stats computedStats_s = compute_statistics_s(0, 0);
 
     REQUIRE(1 == isnan(computedStats_s.average));
+    REQUIRE(0 == isnan(computedStats_s.max));
+    REQUIRE(0 == isnan(computedStats_s.min));
 }
 
 TEST_CASE("raises alerts when max is greater than threshold") {
