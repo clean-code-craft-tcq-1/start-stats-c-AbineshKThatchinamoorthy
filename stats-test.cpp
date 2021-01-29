@@ -17,17 +17,8 @@ TEST_CASE("reports average, minimum and maximum") {
 }
 
 TEST_CASE("average is NaN for empty array") {
- 	Stats computedStats = compute_statistics(0, 0);
- 	//All fields of computedStats (average, max, min) must be
- 	//NAN (not-a-number), as defined in math.h
- 	 
- 	/*REQUIRE(1 == isNaN(computedStats.average));
- 	REQUIRE(0 == isnan(computedStats.max));
- 	REQUIRE(0 == isnan(computedStats.min));*/
- 	 
- 	//Design the REQUIRE statement here.
- 	//Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
- 	}
+ 	struct Stats computedStats = compute_statistics(0, 0); 	
+ }
 
 TEST_CASE("raises alerts when max is greater than threshold") {
     // create additional .c and .h files
