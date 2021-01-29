@@ -8,24 +8,26 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
   statistics_s.min = numberset[0];
   statistics_s.max = numberset[0];
     
-  /*calculating sum*/
-  for (count=0 ;count<setlength;count++)  
+  for (count_i=0 ;count_i<setlength;count_i++)  
   {
-      sum +=numberset[count];
-      if (statistics_s.min > numberset[count])
+      /* calculating sum */
+      sum +=numberset[count_i];
+      /*Identify Minimum Number in the array */
+      if (statistics_s.min > numberset[count_i])
       {
-         statistics_s.min = numberset[count];
+         statistics_s.min = numberset[count_i];
       }
-      if (statistics_s.max < numberset[count])
+      /*Identify Maximum Number in the array */
+      if (statistics_s.max < numberset[count_i])
       {
-          statistics_s.max = numberset[count];
+          statistics_s.max = numberset[count_i];
       }
   }
     
-  /*calculating avg*/  
+  /*calculating average*/  
   statistics_s.average = (sum_f/setlength);
     
-    return statistics_s;
+  return statistics_s;
 }
 
 
