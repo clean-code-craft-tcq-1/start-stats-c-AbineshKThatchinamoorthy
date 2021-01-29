@@ -2,13 +2,13 @@
 *****     (C) COPYRIGHT Robert Bosch GmbH CM-CI2 - All Rights Reserved    *****
 ******************************************************************************/
 /*!                                                                            
-***     \file        alerts.c                                                              
+***     \file        alerts.h                                                              
 ***     \author                                                                
 \nt                  ABINESH KANJI KOVIL THATCHINAMOORTHY (RBEI/ECK1)                                                  
 ***                  Created on 1/29/2021                                                                                    
 ***                                                                            
 \par    File_description                                                       
-***                  To handle the alerts during unexpected situations  
+***                  Header file to handle the alerts during unexpected situations  
 ***                                                                                                     
 ***                                                                            
 *\n*/                                                                          
