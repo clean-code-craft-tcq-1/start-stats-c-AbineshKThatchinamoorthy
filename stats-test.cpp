@@ -22,9 +22,9 @@ TEST_CASE("average is NaN for empty array") {
     //NAN (not-a-number), as defined in math.h
     
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
-    REQUIRE(abs(computedStats_s.average == NAN);
-    REQUIRE(abs(computedStats_s.max     == NAN);
-    REQUIRE(abs(computedStats_s.min     == NAN);
+    REQUIRE(computedStats_s.average == NAN);
+    REQUIRE(computedStats_s.max     == NAN);
+    REQUIRE(computedStats_s.min     == NAN);
 }
 
 TEST_CASE("raises alerts when max is greater than threshold") {
