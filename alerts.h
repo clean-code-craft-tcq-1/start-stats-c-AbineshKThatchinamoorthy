@@ -17,6 +17,7 @@
 /* INCLUSIONS */
 #include "stats.h"
 
+/* TYPE DEFINITIONS */
 typedef void (*alerter_funcptr)();
 
 /* FUNCTION DECLARATION */
